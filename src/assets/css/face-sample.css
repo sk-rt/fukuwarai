@@ -1,0 +1,77 @@
+
+/*******************************
+
+	👁 左目の位置を調整
+
+*******************************/
+.isShowSample .left-eye-01 {
+	top: 560px;
+	left: 280px;
+	transform: rotate(4deg);
+}
+.isShowSample .right-eye-01 {
+	top: 560px;
+	right: 280px;
+	transform: rotate(-4deg);
+}
+.isShowSample .left-eye-02 {
+	top: 500px;
+	left: 280px;
+	transform: rotate(0deg);
+}
+.isShowSample .right-eye-02 {
+	top: 500px;
+	right: 280px;
+	transform: rotate(-0deg);
+}
+.isShowSample .left-eye-03 {
+	top: 500px;
+	left: 270px;
+	transform: rotate(5deg);
+}
+.isShowSample .right-eye-03 {
+	top: 500px;
+	right: 270px;
+	transform: rotate(-5deg);
+}
+
+/*******************************
+
+	👄 口の位置を調整
+
+*******************************/
+.isShowSample .mouth-01 {
+	bottom: 180px;
+	left: 360px;
+	transform: rotate(0deg);
+}
+.isShowSample .mouth-02 {
+	bottom: 175px;
+	left: 355px;
+	transform: rotate(0deg);
+}
+.isShowSample .mouth-03 {
+	bottom: 210px;
+	left: 350px;
+	transform: rotate(0deg);
+}
+/*******************************
+
+	👃 鼻の位置を調整
+
+*******************************/
+.isShowSample  .nose-01 {
+	bottom: 420px;
+	left: 544px;
+	transform: rotate(0deg);
+}
+.isShowSample  .nose-02 {
+	bottom: 420px;
+	left: 532px;
+	transform: rotate(0deg);
+}
+.isShowSample  .nose-03 {
+	bottom: 430px;
+	left: 530px;
+	transform: rotate(0deg);
+}

@@ -1,0 +1,216 @@
+
+/* General */
+html {
+	font-size: 16px;
+}
+body {
+	overflow: hidden;
+	font-family: sans-serif;
+}
+
+svg {
+    overflow: visible;
+    transform: translate3d(0, 0, 0);
+    display: block;
+    margin: auto;
+    box-shadow : 0px 0px 10000px transparent;
+}
+
+svg g {
+    overflow: visible;
+}
+
+.page-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+}
+
+
+/* FaceContainer */
+.face-block {
+    position: relative;
+}
+.face-scaler {
+    height: 100%;
+}
+.face-container {
+    width: 1200px;
+    height: 1200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+/* グリッド */
+.grid {
+    position: absolute;
+    left: 0;
+    right: -2px;
+    top: -2px;
+    bottom: 0;
+    background-image: linear-gradient( -90deg, transparent 0%, transparent 99%, rgba(255, 255, 255, 0.4) 99%, rgba(255, 255, 255, 0.4) 100%), linear-gradient( 0deg, transparent 0%, transparent 99%, rgba(255, 255, 255, 0.4) 99%, rgba(255, 255, 255, 0.4) 100%);
+    background-size: 100px 100px, 100px 100px;
+    background-position: left top;
+    opacity: 0;
+    transition: .4s all;
+    pointer-events: none;
+}
+
+.grid:after {
+    content: "1マス = 100px";
+    position: absolute;
+    top: 100%;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #FFF;
+}
+.grid-center:after,.grid-center:before {
+	content: "";
+	width: 100px;
+	height: 2px;
+	background: #FFF;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+}
+.grid-center:after {
+	transform: translate(-50%,-50%) rotate(90deg) ;
+}
+
+.isShowGrid .grid {
+    opacity: 1;
+}
+/* 顔パーツ */
+.left-eye,
+.right-eye,
+.mouth,
+.nose {
+    transition: .4s;
+}
+/* バックグラウンド */
+.page-wrapper {
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom:0;
+}
+.page-wrapper {
+	background: #ccc;
+}
+.bg-base-01 {
+	background-color: #70c49a;
+}
+.bg-base-02 {
+	background-color: #d6d16f;
+}
+.bg-base-03 {
+	background-color: #e3a333;
+}
+.face-error {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    z-index: 100;
+   
+    transform: translate(-50%,-50%);
+   
+}
+.face-error div {
+    background-color: #C10;
+    color: #FFF;
+    font-size: 1.3rem;
+    padding: .7em 1.5em;
+    border-radius: 2rem;
+    margin: 6px;
+}
+
+:root {
+	--move-x: 0px;
+	--move-y: 0px;
+	--move-eye-x: 0px;
+	--move-eye-y: 0px;
+}
+.mouseMoveEl {
+	transform: translate( var(--move-x), var(--move-y) );
+}
+.mouseMoveEye {
+	transform: translate( var(--move-eye-x), var(--move-eye-y) );
+}
+
+/* Editor */
+.editor-block {
+    
+    position: relative;
+    z-index: 100;
+}
+.editor-part {
+    height: 100%;
+}
+.editor-inner {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 2fr 2fr;
+}
+.editor-item {
+    /* border-bottom: 2px solid transparent; */
+}
+.editor-item h2 {
+    font-size: 14px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 50px;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 14px;
+    color: rgba(255, 255, 100, 0.8);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.editor-editor {
+    height: calc(100% - 50px);
+}
+.editor-block textarea {
+    display: block;
+    width: 100%;
+   
+    max-width: 100%;
+}
+.editor-actions {
+    height: 100%;
+}
+.editor-actions-submit {
+    display: block;
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    border:none;
+    padding: 0;
+    position: relative;
+}
+.editor-actions-submit span {
+    font-weight: 600;
+    font-size: 1rem;
+    position: absolute;
+    display: block;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.editor-item * ::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.editor-item * ::-webkit-scrollbar-track  {
+    border-radius: 4px;
+}
+.editor-item * ::-webkit-scrollbar-thumb {
+    background-color:rgba(255, 255, 255, 0.4);;
+	border-radius: 4px;
+}
+.editor-item * ::-webkit-scrollbar:horizontal {
+    height: 8px;
+}
