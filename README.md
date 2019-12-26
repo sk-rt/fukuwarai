@@ -1,4 +1,3 @@
 # fukuwarai
 
-- 2017年頃制作
-- json/cssコードで福笑い
+- json/cssコードで福笑い(2017)
